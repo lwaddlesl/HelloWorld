@@ -5,3 +5,7 @@
 body {
   background-color: aqua;
 }
+
+body p {
+  color: green;
+}
