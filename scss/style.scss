@@ -1,9 +1,31 @@
 * {
     margin: 0;
+    padding: 0;
+    border: 0;
 }
+
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: aqua;
-    p {
-        color: green;
+    display: flexbox;
+    background-color: rgba(39, 37, 37, 0.849);
+}
+.header {
+    text-align: center;
+    padding: 20px;
+    margin: 0 100px;
+    background-color: black;
+    border: solid rgb(175, 122, 42);
+    border-radius: 50px;
+    .link {
+        text-decoration: none;
+        color: white;
+        padding: 50px;
     }
 }
