@@ -1,32 +1,370 @@
+@charset "UTF-8";
+/*Обнуление*/
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   border: 0;
 }
 
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
 body {
-  display: flexbox;
-  background-color: rgba(39, 37, 37, 0.849);
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*--------------------*/
+* {
+  font-size: 1.25rem;
+}
+
+body {
+  background-color: burlywood;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .header {
-  text-align: center;
-  padding: 20px;
-  margin: 0 100px;
-  background-color: black;
-  border: solid #af7a2a;
-  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  font-size: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+  height: auto;
 }
 
-.header .link {
-  text-decoration: none;
+.header .logo {
+  margin: 2rem;
+  margin-left: 6rem;
+}
+
+.header .links {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 10rem;
+}
+
+.header .links a {
+  color: black;
+  margin: 2rem;
+}
+
+.header .links a:hover {
+  color: #614405;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.home {
+  background-color: #fff;
+  background-image: url(/img/laptop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.home .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home h1,
+.home h2 {
   color: white;
+  text-align: center;
+}
+
+.home .home__title {
+  font-size: 2rem;
   padding: 50px;
+}
+
+.home .home__subtitle {
+  font-size: 1rem;
+}
+
+.home .transition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+  padding: 8px;
+  width: 80%;
+  max-width: 150px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.home .btn:hover {
+  background-color: green;
+}
+
+.about {
+  background-color: #dfd9d9;
+  padding-top: 10rem;
+}
+
+.about h1,
+.about p {
+  text-align: center;
+}
+
+.about .about__text {
+  margin: 30px 400px 200px;
+}
+
+.skils {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.skils img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+  width: auto;
+  padding-bottom: 30px;
+}
+
+.skils h1,
+.skils p {
+  padding-bottom: 30px;
+}
+
+.skils .skils__item {
+  height: 380px;
+  width: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.services {
+  height: 1400px;
+  background-color: #e4fdfa;
+  padding-top: 10rem;
+}
+
+.services__text {
+  padding: 30px 400px 200px;
+}
+
+.bloks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.bloks .bloks__item {
+  background-color: #fff;
+  height: auto;
+  width: 380px;
+  padding-bottom: 20px;
+  margin: 50px;
+}
+
+.bloks .bloks__item:hover {
+  background-color: #00887a;
+  color: white;
+}
+
+.bloks .bloks__item:hover button {
+  background-color: #00887a;
+  border: white 2px solid;
+  color: white;
+}
+
+.bloks .bloks__item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: auto;
+}
+
+.bloks .bloks__item h1,
+.bloks .bloks__item p,
+.bloks .bloks__item img {
+  padding: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.bloks .bloks__item button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: #fff;
+  text-transform: uppercase;
+  border: black 2px solid;
+}
+
+.works {
+  background-color: #fff;
+  padding-top: 10rem;
+  width: auto;
+  height: 1616px;
+}
+
+.works img {
+  margin: 30px;
+  width: 370px;
+  height: 370px;
+}
+
+.works .works__imges {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.works .works__text {
+  padding: 30px 400px 50px;
+}
+
+.works .works__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.works .works__buttons button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: #fff;
+  text-transform: uppercase;
+  border: #00887a 3px solid;
+}
+
+.works .works__buttons button:hover {
+  background-color: #00887a;
+  color: #fff;
 }
