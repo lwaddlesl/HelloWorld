@@ -52,10 +52,6 @@ input::-ms-clear {
   display: none;
 }
 
-button {
-  cursor: pointer;
-}
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -89,6 +85,10 @@ h6 {
   font-weight: inherit;
 }
 
+textarea {
+  resize: none;
+}
+
 /*--------------------*/
 * {
   font-size: 15px;
@@ -107,6 +107,10 @@ h1 {
 
 h2 {
   font-size: 20px;
+}
+
+button {
+  cursor: url(/img/cursor1.cur), pointer;
 }
 
 .header {
@@ -486,6 +490,7 @@ h2 {
   height: 84px;
   background-color: #ffffff;
   border-radius: 10px;
+  margin-bottom: 35px;
 }
 
 .contact .feedback .massage {
