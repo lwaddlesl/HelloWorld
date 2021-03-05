@@ -15,6 +15,9 @@
         <div class="logo">
             MyLogo
         </div>
+        <div class="header__burger">
+            <span></span>
+        </div>
         <ul class="links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -183,18 +186,18 @@
             </div>
             <div class="works__sort">
                 <div class="works__buttons">
-                    <button class="work__button">All</button>
-                    <button class="work__button">Web Design</button>
-                    <button class="work__button">Ui/Ux design</button>
-                    <button class="work__button">Mockups</button>
+                    <button class="work__button active" data-filter="all">All</button>
+                    <button class="work__button" data-filter="web-design">Web Design</button>
+                    <button class="work__button" data-filter="ux-design">Ui/Ux design</button>
+                    <button class="work__button" data-filter="mockups">Mockups</button>
                 </div>
                 <div class="works__imges">
-                    <img src="/img/sort/1.jpg" alt="">
-                    <img src="/img/sort/2.jpg" alt="">
-                    <img src="/img/sort/3.jpg" alt="">
-                    <img src="/img/sort/4.jpg" alt="">
-                    <img src="/img/sort/5.jpg" alt="">
-                    <img src="/img/sort/6.png" alt="">
+                    <img class="item-box web-design " src="/img/sort/1.jpg" alt="">
+                    <img class="item-box web-design " src="/img/sort/2.jpg" alt="">
+                    <img class="item-box ux-design " src="/img/sort/3.jpg" alt="">
+                    <img class="item-box ux-design " src="/img/sort/4.jpg" alt="">
+                    <img class="item-box mockups " src="/img/sort/5.jpg" alt="">
+                    <img class="item-box mockups " src="/img/sort/6.png" alt="">
                 </div>
             </div>
         </div>
@@ -253,6 +256,25 @@
         <p>All rights Reserved © 2017</p>
     </footer>
     <script src="/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.work__button').click(function () {
+                const value = $(this).attr('data-filter')
+                if (value == 'all') {
+                    $('.item-box').show('1000')
+                }
+                else {
+                    $('.item-box').not('.' + value).hide('1000')
+                    $('.item-box').filter('.' + value).show('1000')
+                }
+            })
+            $('.work__button').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+        })
+    </script>
 </body>
 
 </html>
