@@ -19,11 +19,11 @@
             <span></span>
         </div>
         <ul class="links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#servicing">Servicing</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact us</a></li>
+            <li class="header__item"><a href="#home">Home</a></li>
+            <li class="header__item"><a href="#about">About</a></li>
+            <li class="header__item"><a href="#servicing">Servicing</a></li>
+            <li class="header__item"><a href="#portfolio">Portfolio</a></li>
+            <li class="header__item"><a href="#contact">Contact us</a></li>
         </ul>
     </header>
     <a name="home"></a>
@@ -58,7 +58,7 @@
                     facere.</p>
             </div>
             <div class="skils">
-                <div class="skils__item">
+                <div class="skils__item awesom-icons">
                     <div class="image">
                         <div class="skils__image">
                             <img src="/img/globe.svg" alt="">
@@ -75,7 +75,7 @@
                             quasi molestiae ullam? Possimus, asperiores dolore?</p>
                     </div>
                 </div>
-                <div class="skils__item">
+                <div class="skils__item one-page">
                     <div class="image">
                         <div class="skils__image">
                             <img src="/img/exchange.svg" alt="">
@@ -92,7 +92,7 @@
                             quasi molestiae ullam? Possimus, asperiores dolore?</p>
                     </div>
                 </div>
-                <div class="skils__item">
+                <div class="skils__item fully-responsive">
                     <div class="skils__image">
                         <img src="/img/thinking.svg" alt="">
                     </div>
@@ -213,7 +213,7 @@
                     et dolore magna aliqua. Ut enim ad minim veniam,</p>
             </div>
             <div class="contactus">
-                <div class="contactus__item">
+                <div class="contactus__item map">
 
                     <div class="contactus__img">
                         <img src="/img/contact/map.png" alt="map">
@@ -223,7 +223,7 @@
                     </div>
 
                 </div>
-                <div class="contactus__item">
+                <div class="contactus__item mail">
                     <div class="contactus__img">
                         <img src="/img/contact/mail.png" alt="mail">
                     </div>
@@ -232,7 +232,7 @@
                         <p>+8801928737807 </p>
                     </div>
                 </div>
-                <div class="contactus__item">
+                <div class="contactus__item phone">
                     <div class="contactus__img">
                         <img src="/img/contact/phone.png" alt="phone">
                     </div>
@@ -243,10 +243,16 @@
                 </div>
             </div>
             <div class="feedback">
-                <textarea class="name" name="name" placeholder="Your Name"></textarea>
-                <textarea class="email" name="email" placeholder="Your Email"></textarea>
-                <textarea class="massage" name="text" placeholder="Write Massage"></textarea>
-                <div>
+                <div class="feedback__name">
+                    <textarea class="name" name="name" placeholder="Your Name"></textarea>
+                </div>
+                <div class="feedback__email">
+                    <textarea class="email" name="email" placeholder="Your Email"></textarea>
+                </div>
+                <div class="feedback__massage">
+                    <textarea class="massage" name="text" placeholder="Write Massage"></textarea>
+                </div>
+                <div class="feedback__btn">
                     <button>send</button>
                 </div>
             </div>
@@ -255,26 +261,10 @@
     <footer>
         <p>All rights Reserved © 2017</p>
     </footer>
-    <script src="/js/index.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
-            $('.work__button').click(function () {
-                const value = $(this).attr('data-filter')
-                if (value == 'all') {
-                    $('.item-box').show('1000')
-                }
-                else {
-                    $('.item-box').not('.' + value).hide('1000')
-                    $('.item-box').filter('.' + value).show('1000')
-                }
-            })
-            $('.work__button').click(function () {
-                $(this).addClass('active').siblings().removeClass('active');
-            })
-        })
-    </script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
