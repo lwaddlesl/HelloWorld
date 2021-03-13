@@ -14,3 +14,22 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active');
     })
 })
+
+// $("sendMess").on("click", function () {
+//     var name = $("#name").val().trim();
+//     var email = $("#email").val().trim();
+//     var massage = $("#massage").val().trim();
+//     if (email == "") {
+//         $("errMess").text("Print Email")
+//         return false;
+//     } else if (name == "") {
+//         $("errMess").text("Print name")
+//         return false;
+//     }
+//     else if (massage == "") {
+//         $("errMess").text("Print massage")
+//         return false;
+//     }
+
+//     $("errMess").text("")
+// })

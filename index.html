@@ -5,26 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
     <header class="header">
         <div class="logo">
-            MyLogo
+            <img src="/img/logo/logo.png" alt="logo">
         </div>
-        <div class="header__burger">
-            <span></span>
+        <div>
+            <ul class="links">
+                <li class="header__item"><a href="#home">Home</a></li>
+                <li class="header__item"><a href="#about">About</a></li>
+                <li class="header__item"><a href="#servicing">Servicing</a></li>
+                <li class="header__item"><a href="#portfolio">Portfolio</a></li>
+                <li class="header__item"><a href="#contact">Contact us</a></li>
+                <li class="header__item"><a href="/to-do.php">ToDo</a></li>
+            </ul>
         </div>
-        <ul class="links">
-            <li class="header__item"><a href="#home">Home</a></li>
-            <li class="header__item"><a href="#about">About</a></li>
-            <li class="header__item"><a href="#servicing">Servicing</a></li>
-            <li class="header__item"><a href="#portfolio">Portfolio</a></li>
-            <li class="header__item"><a href="#contact">Contact us</a></li>
-        </ul>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li class="menu__item"><a href="#home">Home</a></li>
+                <li class="menu__item"><a href="#about">About</a></li>
+                <li class="menu__item"><a href="#servicing">Servicing</a></li>
+                <li class="menu__item"><a href="#portfolio">Portfolio</a></li>
+                <li class="menu__item"><a href="#contact">Contact us</a></li>
+                <li class="menu__item"><a href="/to-do.php">ToDo</a></li>
+
+            </ul>
+        </div>
     </header>
     <a name="home"></a>
     <div class="home">
@@ -51,7 +67,7 @@
             <div class="about__title">
                 <h1>About us</h1>
             </div>
-            <div class="about__text">
+            <div class="about__text after-title">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat molestias laudantium vero.
                     Praesentium,
                     quisquam nobis sed numquam commodi veniam optio quas et vero omnis quae dignissimos animi illo iure
@@ -116,7 +132,7 @@
             <div class="services__title">
                 <h1>Our services</h1>
             </div>
-            <div class="services__text">
+            <div class="services__text after-title">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, natus incidunt vitae nam sunt
                     maiores officia voluptates aut nulla! Ea debitis perspiciatis, optio ducimus placeat veritatis quis
                     excepturi mollitia. Pariatur!</p>
@@ -179,7 +195,7 @@
             <div class="works__title">
                 <h1>Latest Works</h1>
             </div>
-            <div class="works__text">
+            <div class="works__text after-title">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis reprehenderit ad doloribus
                     facilis totam tempore tenetur esse omnis explicabo magni voluptate molestiae ea fugit quisquam
                     saepe, sit sapiente voluptas.</p>
@@ -208,7 +224,7 @@
             <div class="contact__title">
                 <h1>Contact Us</h1>
             </div>
-            <div class="contact__text">
+            <div class="contact__text after-title">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam,</p>
             </div>
@@ -242,20 +258,25 @@
                     </div>
                 </div>
             </div>
-            <div class="feedback">
-                <div class="feedback__name">
-                    <textarea class="name" name="name" placeholder="Your Name"></textarea>
+            <form action="check.php" method="POST" id="form">
+                <div class="feedback">
+                    <div class="feedback__name">
+                        <textarea id="name" class="name form__input req" name="name" placeholder="Your Name"></textarea>
+                    </div>
+                    <div class="feedback__email">
+                        <textarea id="email" class="email form__input req" name="email"
+                            placeholder="Your Email"></textarea>
+                    </div>
+                    <div class="feedback__massage">
+                        <textarea id="massage" class="massage form__input" name="massage"
+                            placeholder="Write Massage"></textarea>
+                    </div>
+                    <div class="feedback__btn">
+                        <button id="sendMess" type="submit">send</button>
+                    </div>
                 </div>
-                <div class="feedback__email">
-                    <textarea class="email" name="email" placeholder="Your Email"></textarea>
-                </div>
-                <div class="feedback__massage">
-                    <textarea class="massage" name="text" placeholder="Write Massage"></textarea>
-                </div>
-                <div class="feedback__btn">
-                    <button>send</button>
-                </div>
-            </div>
+                <div id="errMess"></div>
+            </form>
         </div>
     </div>
     <footer>
